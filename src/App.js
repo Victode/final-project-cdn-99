@@ -66,7 +66,7 @@ function App() {
                             </>
                         )}
 
-                        <div class="vl"></div>
+                        <div className="vl"></div>
                         <Link className="nav-link mx-2 mr-4 " to="/cart">
                             <button type="button" className="btn cart-logo">
                                 <span>

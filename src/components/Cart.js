@@ -25,7 +25,9 @@ export default function Cart(props) {
                             <div className="card-footer">
                                 <button onClick={() => { removeItem(id, uid) }} type="button" className="btn btn-secondary btn-sm mx-2"> Remove from Cart </button>
                             </div>
-                            <a className='btn btn-secondary' href="/checkout">continue to checkout </a>
+                            <Link to="/checkout">
+                            <a className='btn btn-secondary' >continue to checkout </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
