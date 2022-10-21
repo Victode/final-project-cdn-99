@@ -14,7 +14,7 @@ export default function PostSingle() {
 
     return (
         <div className='center-single'>
-            <h1 className="text-center">Post Single: {id}</h1>
+            {/* <h1 className="text-center">Post Single: {id}</h1> */}
             <Post post={post} />
         </div>
     )

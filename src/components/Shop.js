@@ -27,12 +27,12 @@ export default function Post(props) {
 
     return (
         <>
-            <div div className='container ' >
-                <div className='row'>
-                    <div className='container px-5 mx-5'>
-                        <div className="col mx-2">
-                            <div className="card mb-4 ">
-                                <div className="card-header">
+            <div div className='container border border-dark pt-4 card-column my-2' >
+                <div className='row  flex'>
+                    <div className=' px-5 mx-5 '>
+                        <div className="  mx-2">
+                            <div className="card  mb-4 card-bgs">
+                                <div className="card-header ">
                                     {
                                         (!props.preview) ?
                                             (
@@ -45,12 +45,14 @@ export default function Post(props) {
                                             )
                                             :
                                             <Link style={{ color: 'black' }} to={`/post/${props.post.uid}/${props.post.id}`}>
-                                                <img className="center image" src={props.post.image} width="180" height="200" />
-                                                <p className="card-title text-center"> {props.post.guitar}</p>
-                                                <div className="middle">
-                                                    <div className="text">Inspect guitar</div>
+                                                <div className='containers'>
+                                                    <img className="center image" src={props.post.image} width="180" height="200" />
+                                                    <p className="card-title text-center"> {props.post.guitar}</p>
+                                                    <div className="middle">
+                                                        <div className="text">Inspect guitar</div>
+                                                    </div>
+                                                    <p className="card-text text-center">Price: ${props.post.price}</p>
                                                 </div>
-                                                <p className="card-text text-center">Price: ${props.post.price}</p>
                                             </Link>
                                     }
                                 </div>
@@ -78,27 +80,8 @@ export default function Post(props) {
                         </div>
                     </div>
                 </div>
-                        </div>
-                        </>
-            )
+            </div>
+        </>
+    )
 }
 
-    //     <div className="container">
-    //     <Row xs={1} md={2} className="g-4">
-    //   {Array.from({ length: 4 }).map((_, idx) => (
-    //     <Col>
-    //       <Card>
-    //         <Card.Img variant="top" src="holder.js/100px160" />
-    //         <Card.Body>
-    //           <Card.Title>Card title</Card.Title>
-    //           <Card.Text>
-    //             This is a longer card with supporting text below as a natural
-    //             lead-in to additional content. This content is a little bit
-    //             longer.
-    //           </Card.Text>
-    //         </Card.Body>
-    //       </Card>
-    //     </Col>
-    //   ))}
-    // </Row>
-    // </div>

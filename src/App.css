@@ -9,15 +9,19 @@
     font-family: sans-serif;
     box-sizing: border-box;
     color: rgba(0, 0, 0, 0.644);
+    /* text-shadow: 2.5px 2.5px rgb(20, 10, 155); */
 }
 
 body {
-    background-image: linear-gradient( rgb(25, 21, 41), rgb(63, 63, 63), rgb(12, 12, 32),  rgb(26, 26, 61), rgb(144, 144, 175));
+    background-image: linear-gradient( rgb(25, 21, 41), rgb(53, 53, 53), rgb(12, 12, 32),  rgb(26, 26, 61), rgb(144, 144, 175));
 }
 .home-bg{
     background-color: #000000;
 }
+h4{
+  color:white;
 
+}
 .vl {
   border-left: 1px solid rgb(236, 229, 221);
   height: 58px;
@@ -33,11 +37,18 @@ body {
 }
 
 .card-column{
-    display: inline-block;
+  display:flex;
+  align-items: center;
 }
+.card-bgs{
+  background-image: linear-gradient( rgb(52, 46, 75), rgb(19, 15, 27), rgb(48, 48, 95),  rgb(34, 34, 94), rgb(76, 76, 100));
+}
+
+
 .row {
     margin: 0 -5px;
-    
+
+    flex: 1;
 }
 
 
@@ -54,8 +65,13 @@ body {
     background-color: #e7e5dd;
 }
 
+.web-name{
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bolder;
+  text-shadow: 2.5px 2.5px rgb(20, 10, 155);
+}
 .navbar-color {
-    background-image: linear-gradient(rgb(8, 6, 20), rgb(22, 22, 22),  rgb(59, 59, 61));
+    background-image: linear-gradient(rgb(8, 6, 20), rgb(22, 22, 22),  rgb(37, 37, 37));
 
 }
 .bfg{
@@ -64,6 +80,8 @@ body {
 
 .text-start{
     color: rgb(255, 255, 255);
+    font-size: 30px;
+    padding:50px;
 }
 
 h3 {
@@ -72,14 +90,48 @@ h3 {
     color:rgb(255, 255, 255);
     text-shadow: 2px 2px #000000;
     font-size: 32px;
+    
+  }
+  h2{
+    color: white;
   }
 
+.flex{
+  display: inline-block;
+  /* align-items: center; */
+}
+.sign-Incard{
+  background-image: linear-gradient(rgb(40, 40, 49),  rgb(16, 16, 39), rgb(77, 77, 77));
+}
 
 h1 {
 
     font-size: 40px;
     padding: 0 0 0 30px;
     color: rgb(255, 255, 255);
+}
+.opas-img{
+  opacity: 40%;
+}
+.top-right {
+  position: absolute;
+  top: 330px;
+  right: 20px;
+  left:60px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  text-shadow: 2px 5px rgb(116, 111, 111);
+  font-size: 40px;
+}
+.top-rights {
+  position: absolute;
+  top: 590px;
+  right: 0px;
+  left:670px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  text-shadow: 2px 5px rgb(116, 111, 111);
+  font-size: 40px;
 }
 
 .button-register {
@@ -89,14 +141,19 @@ h1 {
     background-color: rgb(160, 145, 120);
 }
 .button-sign {
-    background-color: #edd7b1;
+    background-color: rgb(231, 229, 229);
+    text-shadow: none;
+    border: 1px solid rgb(52, 13, 83);
+    color: black;
 }
 .button-sign:hover {
-    background-color: rgb(160, 145, 120);
+    background-color: rgb(160, 157, 153);
+    text-shadow: none;
 }
 
 .sign-card {
     background-color: rgb(231, 224, 213);
+    text-shadow: none;
 }
 
 .black-bg{
@@ -106,6 +163,7 @@ h1 {
 }
 .signin-color{
     color: rgb(236, 229, 221);
+    text-shadow: none;
 }
 .cart-logo{
     background-color: rgb(255, 255, 255);
@@ -187,11 +245,12 @@ h1 {
     text-align: center;
   }
   
-  .container:hover .image {
+  
+  .containers:hover .image {
     opacity: 0.3;
   }
   
-  .container:hover .middle {
+  .containers:hover .middle {
     opacity: 1;
   }
   
@@ -229,6 +288,11 @@ h1 {
     position: relative;
     text-align: center;
   }
+  .containers {
+    position: relative;
+    text-align: center;
+  }
+
   .centered {
     position: absolute;
     top: 50%;
@@ -249,6 +313,7 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
   h3.text-concert{
     font-weight: bolder;
     font-family:'Times New Roman', Times, serif;
@@ -322,4 +387,33 @@ h1 {
 
 .checkout-text{
     color: white;
+}
+
+.styless{
+  display: flex;
+  border-bottom: 1px solid black;
+
+  flex-direction: column;
+  
+}
+
+h3 .styless{
+  font-weight: bolder;
+}
+
+h4 .styless{
+  font-weight: 100;
+}
+input .styless{
+  height: 30px;
+  padding: 1rem;
+  text-align: center;
+  border: none;
+}
+input .styless:hover::-webkit-inner-spin-button {
+  width: 14px;
+  height: 30px;
+}
+.navbar-shop{
+  background-image: linear-gradient(rgb(183, 155, 219),  rgb(53, 46, 78), rgb(55, 53, 65));
 }

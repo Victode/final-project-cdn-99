@@ -1,34 +1,41 @@
 import Concert from "../components/ConcertCard"
+import React, { useState, useEffect } from 'react';
+
+
 export default function Acoustic() {
+
+
 
     return (
         <>
             <div className='container'>
 
-                <nav class="navbar navbar-expand-lg navbar-light bg-light my-4">
+                <nav className="navbar navbar-expand-lg navbar-light bg-light my-4 navbar-shop">
 
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="/shop">Electric<span class="sr-only">(current)</span></a>
+                <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav">
+                            <li className="nav-item active">
+                                <a className="nav-link text-white" href="/shop">Electric<span className="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/shop-acoustic">Acoustics</a>
+                            <li className="nav-item">
+                                <a className="nav-link text-white" href="/shop-acoustic">Acoustics</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/shop-ukulele">Ukulele</a>
+                            <li className="nav-item">
+                                <a className="nav-link text-white" href="/shop-ukulele">Ukulele</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/shop-accessories">Accessories</a>
+                            <li className="nav-item">
+                                <a className="nav-link text-white" href="/shop-accessories">Accessories</a>
                             </li>
                         </ul>
                     </div>
                 </nav>
             </div>
-            <h1 className="my-5">
-                Acoustic Guitars
+            <h1 className="my-5 text-center">
+                Acoustic Guitars Loading
             </h1>
+     
             <Concert />
-        </>
+
+</>
     )
 }

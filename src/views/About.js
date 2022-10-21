@@ -5,9 +5,9 @@ export default function About() {
 
     return (
         <>
-            <div className="container mt-4 mb-5">
+            <div className="container my-5 py-4">
 
-                <div className="row about-bg">
+                <div className="row about-bg ">
                     <div className="col-4 my-5 mx-4">
                         <div className='container border border-secondary poster-bg'>
                             <Poster />
@@ -32,10 +32,12 @@ export default function About() {
 
                     </div>
                 </div>
-
-                <hr className=" border-light my-4 mt-5" />
-
-                <div className="container my-5 pb-5">
+                <img></img>
+                <hr className=" border-light my-5" />
+                <div>
+                    <img></img>
+                </div>
+                <div className="container mt-4 mb-5 pb-5">
                     <Concert />
                 </div>
 

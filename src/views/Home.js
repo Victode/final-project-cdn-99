@@ -29,7 +29,7 @@ export default function Home() {
                 <div className="row">
                     <div className="col-12 bg-home-color">
                         <div className="mb-4">
-                            <h2 className="pt-5 mt-5 display-4 font-weight-bold col-md-auto text-start">Featured Items</h2>
+                            <h6 className="pt-5 mt-5 display-4 font-weight-bold col-md-auto text-start">Featured Items</h6>
                             <div className="my-5">
 
                                 <p className="text my-5">&#9679;</p>

@@ -1,10 +1,12 @@
 import { createContext, useEffect, useState } from 'react'
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut } from '@firebase/auth'
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, signInWithEmailAndPassword } from '@firebase/auth'
 
 export const AuthContext = createContext()
 
 export const AuthProvider = function(props) {
     const [user, setUser] = useState({ loggedIn: false })
+
+
 
     const auth = getAuth()
     const provider = new GoogleAuthProvider()
@@ -21,9 +23,13 @@ export const AuthProvider = function(props) {
         console.log(result)
     }
     // create a user
-    const register = async function(){
-
-    }
+    const createUser = (email, password, username) => {
+        return createUserWithEmailAndPassword(auth, email, password, username);
+      };
+    //login 
+    const loginN = (email, password) => {
+        return auth.signInWithEmailAndPassword(email, password)
+      }
 
     useEffect(() => {
         onAuthStateChanged(auth, function(userInfo) {
@@ -47,8 +53,9 @@ export const AuthProvider = function(props) {
 
     const value = {
         login: login,
+        loginN:loginN,
         logout: logout,
-        register: register,
+        createUser:createUser,
         user: user
     }
     

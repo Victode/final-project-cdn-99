@@ -1,10 +1,7 @@
-import PostList from '../components/ShopList'
-import PostForm from '../components/PostForm'
+import ShopList from '../components/ShopList'
 import { useContext } from 'react'
 import { AuthContext } from '../contexts/AuthProvider'
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+
 
 export default function Shop() {
     const { user } = useContext(AuthContext)
@@ -14,38 +11,28 @@ export default function Shop() {
         <div>
             <div className='container'>
 
-                <nav class="navbar navbar-expand-lg navbar-light bg-light my-4">
+                <nav className="navbar navbar-expand-lg navbar-light bg-light my-4 navbar-shop">
                   
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="/shop">Electric<span class="sr-only">(current)</span></a>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav">
+                            <li className="nav-item active">
+                                <a className="nav-link text-white" href="/shop">Electric<span className="sr-only">(current)</span></a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/shop-acoustic">Acoustics</a>
+                            <li className="nav-item">
+                                <a className="nav-link text-white" href="/shop-acoustic">Acoustics</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/shop-ukulele">Ukulele</a>
+                            <li className="nav-item">
+                                <a className="nav-link text-white" href="/shop-ukulele">Ukulele</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/shop-accessories">Accessories</a>
+                            <li className="nav-item">
+                                <a className="nav-link text-white" href="/shop-accessories">Accessories</a>
                             </li>
                         </ul>
                     </div>
                 </nav>
-                <PostList />
+                <ShopList />
             </div>
-            <h1 className="text-center my-5">Shopping Page</h1>
-            {
-                (user.loggedIn) ?
-                    (
-                        <>
-                            <p className="text-center">Welcome, {user.username}</p>
-                        </>
-                    )
-                    :
-                    ''
-            }
+           
 
         </div>
     )

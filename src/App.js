@@ -13,6 +13,7 @@ import Acoustic from './views/ShopAcoustic';
 import Ukulele from './views/ShopUkulele';
 import Accessories from './views/ShopAccessories';
 import Checkout from './views/Checkout';
+import Register from './views/Register';
 
 function App() {
     const { logout, user } = useContext(AuthContext)
@@ -21,7 +22,7 @@ function App() {
         <BrowserRouter>
             <nav className="navbar navbar-expand-lg navbar-dark navbar-color ">
                 <a className="navbar-brand mx-4" href="/">
-                    <h1 className="font-weight-bold mt-2 pr-2"> PROJECT GUITAR </h1>
+                    <h3 className="font-weight-bold mt-2 pr-2 web-name"> PROJECT GUITAR </h3>
                 </a>
                 <div
                     className="collapse navbar-collapse "
@@ -44,13 +45,16 @@ function App() {
 
                     <div className="navbar-nav ml-auto">
 
-
+                        
                         {user.loggedIn ? (
-                            <Link className="nav-link">
-                                <button onClick={logout} className="btn btn-secondary sign-in-button">
-                                    Logout
-                                </button>
-                            </Link>
+                            <>
+                                <h6 className='mt-3 pt-1 pr-3'> Welcome, {user.username}!</h6>
+                                <Link className="nav-link pr-3">
+                                    <button onClick={logout} className="btn btn-secondary sign-in-button">
+                                        Logout
+                                    </button>
+                                </Link>
+                            </>
                         ) : (
                             <>
                                 <Link className="nav-link" to="/signin">
@@ -93,18 +97,28 @@ function App() {
                     <Route path="/shop-ukulele" element={<Ukulele />} />
                     <Route path="/shop-accessories" element={<Accessories />} />
                     <Route path="/checkout" element={<Checkout />} />
-                    
+                    <Route path="/register" element={<Register />} />
+
 
                 </Routes>
             </div>
+            
             <div className="card bfg">
                 <div className=" text-center card-body ">
-                    <h2 className="font-weight-bold mt-4 mb-2 text-footer">Become a member today!</h2>
+                    <h2 className="font-weight-bold mt-3 mb-2 text-footer">Become a member today!</h2>
                     <h5 className="font-weight-bold my-4 text-footer">Let's get started</h5>
 
-                    <button className="btn btn-light btn-sm font-weight-bold rounded-lg mr-5 px-4 mb-5 mt-2">
+                    <button className="btn btn-light btn-sm font-weight-bold rounded-lg  px-4 mb-4 mt-1">
                         Upgrade to member
                     </button>
+                 
+                    <p className="mb-1">&copy; 2016-2022 Project Guitar</p>
+                    <ul className="list-inline">
+                        <li className="list-inline-item"><a href="#">Privacy</a></li>
+                        <li className="list-inline-item"><a href="#">Terms</a></li>
+                        <li className="list-inline-item"><a href="#">Support</a></li>
+                    </ul>
+   
 
                 </div>
             </div>

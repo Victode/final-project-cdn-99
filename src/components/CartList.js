@@ -9,5 +9,6 @@ export default function CartList() {
         <div>
             { carts.map((post) => <Cart post={post} preview={true} key={post.id} />) }
         </div>
+
     )
 }

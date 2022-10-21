@@ -7,6 +7,9 @@ export const DataContext = createContext()
 export const DataProvider = function (props) {
     const [posts, setPosts] = useState([])
     const [carts, setCarts] = useState([])
+    const [shopAcoustic, setShopAcoustic] = useState([])
+    const [shopAccessories, setShopAccessories] = useState([])
+    const [shopUkulele, setShopUkulele] = useState([])
     const { user } = useContext(AuthContext)
     const db = getFirestore()
 

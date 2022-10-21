@@ -7,7 +7,7 @@ export default function Cart() {
 
     return(
         <>
-            <p className='text-center'>Shopping Cart</p>
+            <h1 className='my-5 text-center'>Shopping Cart</h1>
             <CartList />
         </>
     )
